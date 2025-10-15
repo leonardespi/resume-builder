@@ -13,9 +13,25 @@ const theme = extendTheme({
     },
   },
   fonts: {
-    heading: 'Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji"',
-    body: 'Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji"',
+    heading: 'monospace',
+    body: 'monospace',
   },
+  components: {
+    Switch: {
+      baseStyle: {
+        track: {
+          bg: "blackAlpha.300",
+          _checked: { bg: "black" },
+        },
+        thumb: {
+          bg: "white",
+          border: "2px solid",
+          borderColor: "black",
+        },
+      },
+      defaultProps: { colorScheme: "blackAlpha" },
+    },
+  }
 });
 
 export default theme;
